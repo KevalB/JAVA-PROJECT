@@ -10,7 +10,7 @@ public class frameList extends JFrame
 	Font f1;
 	JLabel labelList;
 	JButton buttonList;
-	JTextField txtList;
+	JTextArea txtArea;
 	MyActionListener ml = new MyActionListener(this);
 	frameList()
 	{
@@ -20,17 +20,17 @@ public class frameList extends JFrame
 		
 		f1 = new Font("Times",Font.BOLD,25);
 		
-		txtList=new JTextField();
+		txtArea=new JTextArea();
 		buttonList=new JButton("List");
 		labelList=new JLabel("Click button to show all cases:");
 		
-		add(txtList);
+		add(txtArea);
 		add(buttonList);
 		add(labelList);
 		
 		labelList.setFont(f1);
 		
-		txtList.setBounds(100,150,600,550);
+		txtArea.setBounds(100,150,600,550);
 	
 		buttonList.setBounds(300,720,200,100); 
 		
