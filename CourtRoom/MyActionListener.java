@@ -1,4 +1,4 @@
-	//package p1;
+package CourtRoom;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -14,9 +14,9 @@ public class MyActionListener implements ActionListener
 	frameUpdate mf3;
 	frameDetails mf4;
 	frameList mf5;
-	
-	/*//Defining attributes
-	String cName;
+
+	//Defining attributes
+	/*String cName;
 	int mNo;
 	String cAddr;
 	
@@ -37,7 +37,7 @@ public class MyActionListener implements ActionListener
 	char ch[] = new char[1000];
 
 	try{
-		FileReader fr = new FileReader("phonebookfile.txt");
+		FileReader fr = new FileReader("casebookfile.txt");
 	}
 	catch(IOException){
 		System.out.println(e);
@@ -54,35 +54,6 @@ public class MyActionListener implements ActionListener
 	}
 
 	MyActionListener(frameSearch a){
-		/*int i;
-		System.out.print("Enter name :- ");
-		String avoid= scan.nextLine();// To get getting string random
-		String nameTemp= scan.nextLine();
-		nameTemp = nameTemp.toLowerCase();
-		int ptr=0;
-		System.out.println("Case\tNumber\tCity");
-		for(i=0;i<cases.length-1;i++)
-		{
-             String compName = String.valueOf(arrdata[i][0]);
-
-			int nameres =(compName).compareTo(nameTemp); // Comparing the input string if it matches with any one in the list
-			if(nameres==0)
-			{
-				for(int j=0;j<3;j++)
-            	{
-                	System.out.print(arrdata[i][j]);   
-                }
-                System.out.println("");
-			}
-			else
-			{
-				ptr++;
-			}
-		}
-		if(ptr==cases.length-1)
-		{
-			System.out.println("No record found");
-		}*/
 		this.mf = a;
 	}
 	
@@ -99,17 +70,6 @@ public class MyActionListener implements ActionListener
 	}
 
 	MyActionListener(frameList a){
-		/*//Printing all the records
-        System.out.println("");
-		System.out.println("Case\tNumber\tCity");
-		for(int i=0;i < cases.length-1; i++)
-        {
-            for(int j=0;j<3;j++)
-            {
-                System.out.print(arrdata[i][j]);   
-            }
-        	System.out.println("");
-        }	*/
 		this.mf5 = a;
 	}
 	
