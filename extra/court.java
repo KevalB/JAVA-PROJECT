@@ -1,8 +1,17 @@
 package CourtRoom;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
-class cases
+public class compareCase
 {
+	public void getCaseFile(String s) throws Exception
+	{
+		char ch[] = new char[1000];
+		FileReader fr = new FileReader(s);
+		fr.read(ch);
+		fr.close();
+	}
+
 	cases theCases[] = new cases[50];
 	public static int count;
 
@@ -12,7 +21,7 @@ class cases
 	// To compare cases
 	public int compareCaseObjects(cases c1, cases c2)
 	{
-		if (c1.caseName.equalsIgnoreCase(c2.caseName)) {
+		if (c1.casesName.equalsIgnoreCase(c2.casesName)) {
 
 			// Printing cases exists
 			System.out.println(
@@ -179,9 +188,9 @@ class cases
 
 		int caseIndex = isAvailable(sNo);
 
-		if (caseIndex != -1) {
-			theCases[caseIndex].caseQtyCopy--;
-			return theCases[caseIndex];
+		if (casesIndex != -1) {
+			theCases[casesIndex].caseQtyCopy--;
+			return theCases[casesIndex];
 		}
 		return null;
 	}

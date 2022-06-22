@@ -1,4 +1,4 @@
-package CourtRoom;
+//package CourtRoom;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -8,11 +8,12 @@ import java.io.IOException;
 import java.awt.AWTEvent.*;
 import java.lang.*;
 
+
 public class frameMaster extends JFrame
 {
 	Font f0,f1;
 	JLabel title;
-	JButton buttonAdd, buttonList, buttonSearch, buttonUpdate, buttonLogout	;
+	JButton buttonAdd, buttonList, buttonSearch, buttonUpdate;
 	JTextField txtName, txtAge, txtGender;
 
 	ImageIcon backImage;
@@ -42,7 +43,6 @@ public class frameMaster extends JFrame
 		buttonList = new JButton("List");
 		buttonSearch = new JButton("Search");
 		buttonUpdate = new JButton("Update");
-		buttonLogout = new JButton("Logout");
 		
 		//title.setOpaque(true);
 		//title.setBackground(Color.BLUE);
@@ -54,25 +54,18 @@ public class frameMaster extends JFrame
 		add(buttonList);
 		add(buttonSearch);
 		add(buttonUpdate);
-		add(buttonLogout);
-		add(background);
-
 		
 		title.setFont(f0);
 		buttonAdd.setFont(f1);
 		buttonList.setFont(f1);
 		buttonSearch.setFont(f1);
 		buttonUpdate.setFont(f1);
-		buttonLogout.setFont(f1);
-
-		title.setForeground(Color.WHITE);
 		
 		title.setBounds(130, 0, 600, 100);
 		buttonAdd.setBounds(100, 100, 200, 100);
 		buttonList.setBounds(320, 100, 200, 100);
 		buttonUpdate.setBounds(540, 100, 200, 100);
 		buttonSearch.setBounds(320, 300, 200, 100);
-		buttonLogout.setBounds(540, 500, 200, 100);
 
 		//buttonVerify.addActionListener(ml);
 		
@@ -80,7 +73,6 @@ public class frameMaster extends JFrame
 		buttonSearch.addActionListener(ml);
 		buttonUpdate.addActionListener(ml);
 		buttonList.addActionListener(ml);
-		buttonLogout.addActionListener(ml);
 		
 		addWindowListener(new WindowAdapter()
 			{
@@ -89,5 +81,10 @@ public class frameMaster extends JFrame
 					System.exit(0);
 				}
 			});
+	}
+	public static void main(String args[])
+	{
+			frameMaster mfm = new frameMaster();
+			mfm.setVisible(true);
 	}
 }

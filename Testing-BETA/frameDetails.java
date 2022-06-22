@@ -1,4 +1,4 @@
-package CourtRoom;
+//package CourtRoom;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -11,11 +11,6 @@ class frameDetails extends JFrame
 	JButton Save;
 	JLabel JLabelName, JLabelJudge, JLabelCourt;
 	JTextField txtName, txtJudge, txtCourt;
-
-	ImageIcon backImage;
-	JPanel background;
-	JLabel imglabel;
-
 	MyActionListener ml = new MyActionListener(this);
 	frameDetails()
 	{
@@ -23,14 +18,6 @@ class frameDetails extends JFrame
 		setLayout(null);
 		setBounds(0,0,600,600);
 		
-		backImage = new ImageIcon(getClass().getClassLoader().getResource("img/court2.jpg"));
-		background = new JPanel();
-		background.setBounds(0,0,600,600);
-		
-		imglabel = new JLabel();
-		imglabel.setIcon(backImage);
-		background.add(imglabel);
-
 		f1 = new Font("Times",Font.BOLD,25);
 		
 		txtName=new JTextField();
@@ -48,12 +35,11 @@ class frameDetails extends JFrame
 		add(JLabelJudge);
 		add(JLabelCourt);
 		add(Save);
-		add(background);
 		
 		JLabelName.setFont(f1);
 		JLabelCourt.setFont(f1);
 		JLabelJudge.setFont(f1);
-
+		
 		txtName.setBounds(50,50,300,100);
 		txtJudge.setBounds(50,200,300,100);
 		txtCourt.setBounds(50,350,300,100);
@@ -62,13 +48,7 @@ class frameDetails extends JFrame
 		JLabelJudge.setBounds(50,170,500,30);
 		JLabelCourt.setBounds(50,320,500,30);
 
-		JLabelName.setForeground(Color.WHITE);
-		JLabelJudge.setForeground(Color.WHITE);
-		JLabelCourt.setForeground(Color.WHITE);
-
 		Save.setBounds(50,500,500,30);
-
-		Save.addActionListener(ml);
 		
 		addWindowListener(new WindowAdapter()
 			{

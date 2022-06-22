@@ -1,4 +1,4 @@
-package CourtRoom;
+//package CourtRoom;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -11,25 +11,12 @@ public class frameUpdate extends JFrame
 	JLabel oldCase, newCase, updatedCase;
 	JButton buttonUpdate;
 	JTextField txtOld, txtNew, txtUpdated;
-
-	ImageIcon backImage;
-	JPanel background;
-	JLabel imglabel;
-
 	MyActionListener ml = new MyActionListener(this);
 	frameUpdate()
 	{
 		super("Case Update");
 		setLayout(null);
 		setBounds(0,0,500,700);
-
-		backImage = new ImageIcon(getClass().getClassLoader().getResource("img/court2.jpg"));
-		background = new JPanel();
-		background.setBounds(0,0,500,615);
-		
-		imglabel = new JLabel();
-		imglabel.setIcon(backImage);
-		background.add(imglabel);
 		
 		f1 = new Font("Times",Font.BOLD,25);
 		
@@ -41,10 +28,6 @@ public class frameUpdate extends JFrame
 		newCase=new JLabel("Enter new name for the case:");
 		updatedCase=new JLabel("Updated to:");
 		
-		oldCase.setForeground(Color.WHITE);
-		newCase.setForeground(Color.WHITE);
-		updatedCase.setForeground(Color.WHITE);
-
 		add(txtOld);
 		add(txtNew);
 		add(txtUpdated);
@@ -52,7 +35,6 @@ public class frameUpdate extends JFrame
 		add(oldCase);
 		add(newCase);
 		add(updatedCase);
-		add(background);
 		
 		oldCase.setFont(f1);
 		newCase.setFont(f1);
@@ -69,7 +51,6 @@ public class frameUpdate extends JFrame
 		updatedCase.setBounds(50,320,300,30);
 		
 		buttonUpdate.addActionListener(ml);
-
 		
 		addWindowListener(new WindowAdapter()
 			{

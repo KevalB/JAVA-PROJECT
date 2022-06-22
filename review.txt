@@ -1,0 +1,21 @@
+GROUP 9
+Project review:
+
+
+- Login/register
+Pending work
+
+
+-Search frame-victim name, case name, judge name
+login/register
+
+
+-Navigation
+GUI
+
+-Password(post method) doesn't show
+Searching by all attributes in one page
+
+-Email
+Forgot password
+Seach/Update completion
